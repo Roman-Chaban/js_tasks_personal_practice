@@ -4,8 +4,6 @@ const showEveryElementInArray = (numbers) => {
   }
 };
 
-// showEveryElementInArray([1, 3, 5, 7]);
-
 const findSumOfArray = (numbers) => {
   let sum = 0;
 
@@ -16,8 +14,6 @@ const findSumOfArray = (numbers) => {
   return sum;
 };
 
-// console.log(findSumOfArray([2, 5, 10]));
-
 const findAnAverageNumberInArray = (numbers) => {
   let sum = 0;
 
@@ -27,8 +23,6 @@ const findAnAverageNumberInArray = (numbers) => {
 
   return sum / numbers.length;
 };
-
-// console.log(findAnAverageNumberInArray([4, 8, 12]));
 
 const findMinElementInArray = (numbers) => {
   let minimum = numbers[0];
@@ -42,8 +36,6 @@ const findMinElementInArray = (numbers) => {
   return minimum;
 };
 
-// console.log(findMinElementInArray([7, 2, 9, 1]));
-
 const findMaxElementInArray = (numbers) => {
   let max = numbers[0];
 
@@ -55,8 +47,6 @@ const findMaxElementInArray = (numbers) => {
 
   return max;
 };
-
-// console.log(findMaxElementInArray([7, 2, 9, 1, 25]));
 
 const findMinAndMaxElementsInArray = (numbers) => {
   let minimum = numbers[0];
@@ -73,8 +63,6 @@ const findMinAndMaxElementsInArray = (numbers) => {
   return { minimum, maximum };
 };
 
-// console.log(findMinAndMaxElementsInArray([7, 2, 9, 1, 25]));
-
 const findEvenInArray = (numbers) => {
   const evenNumbers = [];
 
@@ -87,8 +75,6 @@ const findEvenInArray = (numbers) => {
   }
   return evenNumbers;
 };
-
-// console.log(findEvenInArray([1, 2, 3, 4, 5, 6]));
 
 const findOddInArray = (numbers) => {
   const oddNumbers = [];
@@ -103,8 +89,6 @@ const findOddInArray = (numbers) => {
 
   return oddNumbers;
 };
-
-// console.log(findOddInArray([1, 2, 3, 4, 5, 6]));
 
 const findOddAndEevenNumbersInArray = (numbers) => {
   const numbersObject = {
@@ -126,8 +110,6 @@ const findOddAndEevenNumbersInArray = (numbers) => {
   return numbersObject;
 };
 
-// console.log(findOddAndEevenNumbersInArray([1, 2, 3, 4, 5, 6]));
-
 const findAllNumbersBiggerThanTreshold = (numbers, treshold) => {
   const numbersBiggerThanTreshold = [];
 
@@ -139,8 +121,6 @@ const findAllNumbersBiggerThanTreshold = (numbers, treshold) => {
 
   return numbersBiggerThanTreshold;
 };
-
-// console.log(findAllNumbersBiggerThanTreshold([3, 8, 1, 10], 5));
 
 const createNewArrayWithoutZeros = (numbers) => {
   const numbersWithoutZeros = [];
@@ -154,8 +134,6 @@ const createNewArrayWithoutZeros = (numbers) => {
   return numbersWithoutZeros;
 };
 
-// console.log(createNewArrayWithoutZeros([0, 5, 0, 2, 7, 10]));
-
 const deleteDuplicatesInArray = (numbers) => {
   const arrayWithoutDuplicates = [];
 
@@ -168,8 +146,6 @@ const deleteDuplicatesInArray = (numbers) => {
   return arrayWithoutDuplicates;
 };
 
-// console.log(deleteDuplicatesInArray([1, 2, 2, 3, 3, 3]));
-
 const countUniqueNumbersInArray = (numbers) => {
   let uniqueNumbers = [];
 
@@ -181,8 +157,6 @@ const countUniqueNumbersInArray = (numbers) => {
 
   return uniqueNumbers.length;
 };
-
-// console.log(countUniqueNumbersInArray([1, 2, 3, 3, 3]));
 
 const countSumOfRepeatedEveryNumber = (numbers) => {
   const numbersObject = {};
@@ -198,8 +172,6 @@ const countSumOfRepeatedEveryNumber = (numbers) => {
   return numbersObject;
 };
 
-// console.log(countSumOfRepeatedEveryNumber([1, 2, 2, 3, 3, 3]));
-
 const findTheSecondBiggerNumber = (numbers) => {
   let theBiggestFigure = Math.max(...numbers);
   const numbersWithoutBiggest = [];
@@ -214,8 +186,6 @@ const findTheSecondBiggerNumber = (numbers) => {
 
   return Math.max(...numbersWithoutBiggest);
 };
-
-// console.log(findTheSecondBiggerNumber([6, 8, 10]));
 
 const findTheMostFrequentNumberInAnArray = (numbers) => {
   let numbersObject = {};
@@ -241,8 +211,6 @@ const findTheMostFrequentNumberInAnArray = (numbers) => {
   return Number(mostFrequent);
 };
 
-// console.log(findTheMostFrequentNumberInAnArray([1, 2, 2, 3, 3, 3]));
-
 const countNumberThanBiggerAnAverage = (numbers) => {
   let theMiddleNumber = 0;
   let sumOfNumbers = 0;
@@ -263,8 +231,6 @@ const countNumberThanBiggerAnAverage = (numbers) => {
   return sumOfBiggerThanAverage;
 };
 
-// console.log(countNumberThanBiggerAnAverage([1, 2, 3, 4, 5]));
-
 const findSumOfMinimumAndMaximum = (numbers) => {
   const minimum = Math.min(...numbers);
   const maximum = Math.max(...numbers);
@@ -276,4 +242,81 @@ const findSumOfMinimumAndMaximum = (numbers) => {
     }, 0);
 };
 
-// console.log(findSumOfMinimumAndMaximum([4, 1, 7, 9]));
+const findAllTargetIndexesInArray = (numbers, target) => {
+  const foundTargets = [];
+
+  if (numbers.length === 0) return [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === target) {
+      foundTargets.push(i);
+    }
+  }
+
+  return foundTargets;
+};
+
+const findSubBetweenTwoIndexes = (numbers, start, end) => {
+  let sum = 0;
+
+  for (let i = start; i < end; i++) {
+    sum += numbers[i];
+  }
+
+  return sum;
+};
+
+const doReversedString = (string) => {
+  let reversedString = "";
+
+  if (typeof string !== "string") return "";
+
+  for (let i = string.length - 1; i >= 0; i--) {
+    reversedString += string[i];
+  }
+
+  return reversedString;
+};
+
+const theLongestWordInString = (string) => {
+  if (typeof string !== "string") return "";
+
+  const splittedString = string.trim().split(/\s+/);
+  let longestWord = splittedString[0];
+
+  for (let i = 1; i < splittedString.length; i++) {
+    if (splittedString[i].length > longestWord.length) {
+      longestWord = splittedString[i];
+    }
+  }
+
+  return longestWord;
+};
+
+const returnAllWordsLongThanNSymbols = (string, n) => {
+  if (typeof string !== "string" || typeof n !== "number") return [];
+
+  const splittedString = string.trim().split(/\s+/);
+  const wordsLongerThanN = [];
+
+  for (let i = 0; i < splittedString.length; i++) {
+    if (splittedString[i].length > n) {
+      wordsLongerThanN.push(splittedString[i]);
+    }
+  }
+
+  return wordsLongerThanN;
+};
+
+const capitalizeTheFirstLetterInString = (string) => {
+  const splittedString = string.trim().split(/\s+/);
+  const capitalizedString = [];
+
+  for (let i = 0; i < splittedString.length; i++) {
+    capitalizedString.push(
+      splittedString[i][0].toUpperCase() + splittedString[i].slice(1),
+    );
+  }
+
+  return capitalizedString.join(" ");
+};
